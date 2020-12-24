@@ -351,12 +351,6 @@
           justify-content: center;
 }
 
-@media only screen and (max-width: 1550px) {
-  .about-me .about-me-items .about-me-content .info-side {
-    margin-top: 40px;
-  }
-}
-
 .about-me .about-me-items .about-me-content .info-side .about-title {
   width: 100%;
 }
