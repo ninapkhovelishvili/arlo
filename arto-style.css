@@ -148,6 +148,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
 }
 
 .slider-section .overlay {
@@ -420,6 +421,12 @@
   line-height: 2;
   letter-spacing: .8px;
   color: #333;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about-me .about-me-items .about-me-content .info-side .about-short-contact .contact-info .info span a:hover {
+  text-decoration: underline;
 }
 
 .about-me .about-me-items .about-me-content .info-side .buttons {
@@ -438,8 +445,256 @@
   letter-spacing: 0.8px;
   color: white;
   background-color: #ff9800;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 20px;
   margin-top: 25px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.about-me .about-me-items .about-me-content .info-side .buttons .button:hover {
+  background-color: rgba(255, 152, 0, 0.8);
+}
+
+.service-section {
+  width: 100%;
+  background-color: #f9f9f9;
+}
+
+.service-section .service-items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.service-section .service-items .heading {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+  margin-top: 130px;
+}
+
+.service-section .service-items .heading span {
+  color: #ff9800;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.service-section .service-items .heading h3 {
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.service-section .service-items .items {
+  width: 100%;
+}
+
+.service-section .service-items .items ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.service-section .service-items .items ul .item {
+  width: 329px;
+  height: 342px;
+  background-color: white;
+  margin-right: 35px;
+  margin-bottom: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.service-section .service-items .items ul .item .inner {
+  width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.service-section .service-items .items ul .item .inner i {
+  font-size: 50px;
+  color: #ff9800;
+  margin-bottom: 20px;
+}
+
+.service-section .service-items .items ul .item .inner h3 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-transform: capitalize;
+}
+
+.service-section .service-items .items ul .item .inner p {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: .8px;
+  font-weight: 400;
+  color: #333;
+}
+
+.featured-work-section {
+  width: 100%;
+}
+
+.featured-work-section .featured-work-items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.featured-work-section .featured-work-items .heading {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.featured-work-section .featured-work-items .heading span {
+  color: #ff9800;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding-bottom: 20px;
+}
+
+.featured-work-section .featured-work-items .heading h3 {
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.featured-work-section .featured-work-items .portfolio-items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.featured-work-section .featured-work-items .portfolio-items .portfolio-filter {
+  width: 100%;
+}
+
+.featured-work-section .featured-work-items .portfolio-items .portfolio-filter ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+.featured-work-section .featured-work-items .portfolio-items .portfolio-filter ul li {
+  margin-right: 40px;
+}
+
+.featured-work-section .featured-work-items .portfolio-items .portfolio-filter ul li a {
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: .8px;
+  color: #000;
+  text-transform: capitalize;
+}
+
+.featured-work-section .featured-work-items .portfolio-items .items {
+  width: 100%;
+  margin-top: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.featured-work-section .featured-work-items .portfolio-items .items .item {
+  width: 329px;
+  height: 329px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+
+.featured-work-section .featured-work-items .portfolio-items .items .item .video video {
+  width: 329px;
+  height: 329px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.featured-work-section .featured-work-items .portfolio-items .items .item .img {
+  width: 329px;
+  height: 329px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.testimonial-section {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 80px;
+  height: 649px;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.testimonial-section .overlay {
+  width: 100%;
+  height: 649px;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 /*# sourceMappingURL=arto-style.css.map */

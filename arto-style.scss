@@ -24,6 +24,26 @@
     flex-direction: column;
 }
 
+@mixin heading-span {
+    color: $yellow;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+@mixin heading-h3 {
+    font-size: 35px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@mixin default-heading {
+    width: 100%;
+    @include column();
+    margin-bottom: 30px;
+}
+
 $yellow: #ff9800;
 $blue: #002245;
 $p-black:#333;
@@ -145,6 +165,7 @@ $p-black:#333;
     width: 100%;
     height: 755px;
     @include background-cover();
+    background-attachment: fixed;
 
     @media only screen and(max-width:1550px) {
      }
@@ -230,22 +251,14 @@ $p-black:#333;
 
 
         .about-me-heading{
-            width: 100%;
-            @include column();
-            margin-bottom: 30px;
+            @include default-heading();
 
             span{
-                color: $yellow;
-                font-size: 14px;
-                text-transform: uppercase;
-                font-weight: 500;
-                padding-bottom: 20px;
+                @include heading-span();
             }
 
             h3{
-                font-size: 35px;
-                font-weight: 700;
-                text-transform: uppercase;
+                @include heading-h3();
             }
         }
 
@@ -359,6 +372,11 @@ $p-black:#333;
                                     line-height: 2;
                                     letter-spacing: .8px;
                                     color: $p-black;
+                                    transition: 0.5s;
+
+                                    &:hover{
+                                        text-decoration: underline;
+                                    }
                                 }
                             }
                         }
@@ -378,12 +396,184 @@ $p-black:#333;
                         letter-spacing: 0.8px;
                         color: white;
                         background-color: $yellow;
-                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                         margin-right: 20px;
                         margin-top: 25px;
+                        transition: 0.5s;
+
+                        &:hover{
+                            background-color: rgba(	255, 152, 0, 0.8);
+                        }
                     }
                 }
             }
         }
+    }
+}
+
+
+.service-section{
+    width: 100%;
+    background-color: #f9f9f9;
+
+    .service-items{
+        width: 100%;
+        @include column();
+
+        .heading{
+            @include default-heading();
+            margin-top: 130px;
+
+            span{
+                @include heading-span();
+            }
+
+            h3{
+                @include heading-h3();
+            }
+        }
+
+        .items{
+            width: 100%;
+
+            ul{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+
+                .item{
+                    width: 329px;
+                    height: 342px;
+                    background-color: white;
+                    margin-right: 35px;
+                    margin-bottom: 35px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .inner{
+                        width: 230px;
+                        @include column();
+
+                        i{
+                            font-size: 50px;
+                            color: $yellow;
+                            margin-bottom: 20px;
+                        }
+
+                        h3{
+                            font-size: 20px;
+                            margin-bottom: 20px;
+                            font-weight: 500;
+                            line-height: 1.4;
+                            text-transform: capitalize;
+                        }
+
+                        p{
+                            font-size: 16px;
+                            line-height: 2;
+                            letter-spacing: .8px;
+                            font-weight: 400;
+                            color: #333;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.featured-work-section{
+    width: 100%;
+
+    .featured-work-items{
+        width: 100%;
+        @include column();
+
+        .heading{
+            @include default-heading();
+
+            span{
+                @include heading-span();
+            }
+
+            h3{
+                @include heading-h3();
+            }
+        }
+
+        .portfolio-items{
+            width: 100%;
+            @include column();
+
+            .portfolio-filter{
+                width: 100%;
+
+                ul{
+                    width: 100%;
+                    display: flex;
+                    margin-top: 30px;
+
+
+                    li{
+                        margin-right: 40px;
+    
+                        a{
+                            font-size: 16px;
+                            line-height: 2;
+                            letter-spacing: .8px;
+                            color: #000;
+                            text-transform: capitalize;
+                        }
+                    }
+                }
+            }
+
+            .items{
+                width: 100%;
+                margin-top: 40px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                .item{
+                    width: 329px;
+                    height: 329px;
+                    margin-bottom: 50px;
+                    border-radius: 5px;
+
+                    .video{
+                        video{
+                            width: 329px;
+                        height: 329px;
+                        object-fit: cover;
+                        }
+                    }
+
+                    .img{
+                        width: 329px;
+                        height: 329px;
+                        @include background-cover();
+                    }
+                }
+            }
+        }
+    }
+}
+
+.testimonial-section{
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 80px;
+    height: 649px;
+    background-attachment: fixed;
+    @include background-cover();
+
+    .overlay{
+        width: 100%;
+        height: 649px;
+        background-color: rgba(0,0,0,.85);
     }
 }
